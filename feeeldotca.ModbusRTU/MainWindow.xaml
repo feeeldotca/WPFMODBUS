@@ -16,6 +16,11 @@
         </RadialGradientBrush>
     </Window.Background>
     <Grid>
-
+        <Ellipse Width="120" Height="120" VerticalAlignment="Top"   HorizontalAlignment="Left"
+Margin="-20" Fill="#06000000" />
+        <Ellipse Width="180" Height="150" VerticalAlignment="Top"   HorizontalAlignment="Left"
+Margin="30, -100, 0,0" Fill="#08000000" />
+        <Ellipse Width="50" Height="50" VerticalAlignment="Top"   HorizontalAlignment="Left"
+Margin="20,90,0,0" Fill="#06FFFFFF" />
     </Grid>
 </Window>
