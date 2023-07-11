@@ -23,4 +23,13 @@ Margin="30, -100, 0,0" Fill="#08000000" />
         <Ellipse Width="50" Height="50" VerticalAlignment="Top"   HorizontalAlignment="Left"
 Margin="20,90,0,0" Fill="#06FFFFFF" />
     </Grid>
+    <Grid Margin="20,0">
+        <Grid.RowDefinitions>'
+            <RowDefinition Height="55" />
+            <RowDefinition Height="30" />
+            <RowDefinition />
+            <RowDefinition Height="30" />
+            
+        </Grid.RowDefinitions>
+    </Grid>
 </Window>
