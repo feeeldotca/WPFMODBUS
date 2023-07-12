@@ -15,6 +15,22 @@
             <GradientStop Color="#ff29384e" Offset="1"/>
         </RadialGradientBrush>
     </Window.Background>
+    <Window.Resources>
+        <Style TargetType="ToggleButton" x:Key="SwitchButtonStyle">
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="Foreground" Value="#9FFF" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border Background="#1000" CornerRadius="5" Name="root">
+                            
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            
+        </Style>    
+    </Window.Resources>
     <Grid>
         <Ellipse Width="120" Height="120" VerticalAlignment="Top"   HorizontalAlignment="Left"
 Margin="-20" Fill="#06000000" />
@@ -22,14 +38,37 @@ Margin="-20" Fill="#06000000" />
 Margin="30, -100, 0,0" Fill="#08000000" />
         <Ellipse Width="50" Height="50" VerticalAlignment="Top"   HorizontalAlignment="Left"
 Margin="20,90,0,0" Fill="#06FFFFFF" />
-    </Grid>
-    <Grid Margin="20,0">
-        <Grid.RowDefinitions>'
-            <RowDefinition Height="55" />
-            <RowDefinition Height="30" />
-            <RowDefinition />
-            <RowDefinition Height="30" />
-            
-        </Grid.RowDefinitions>
+
+        <Grid Margin="20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55" />
+                <RowDefinition Height="30" />
+                <RowDefinition />
+                <RowDefinition Height="30" />
+
+            </Grid.RowDefinitions>
+            <Border Height="1" VerticalAlignment="Bottom" >
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#0fffffff" Offset="0.3"/>
+                        <GradientStop Color="#0FFF" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <StackPanel Orientation="Horizontal">
+                <!--<Image Source="../Assets/Images/logo.png"   Width="25"/>-->
+                <TextBlock Text="FEEEL.CA" Foreground="#D087e8ec" FontSize="13" FontWeight="Normal" VerticalAlignment="Center" Margin="10,0"/>
+            </StackPanel>
+
+            <TextBlock Text="Temp / Humidity Test Modbus RTU tool" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" />
+            <TextBlock.Foreground>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="Gold" Offset="0" />
+                    <GradientStop Color="Orange" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+                
+        </Grid>
     </Grid>
 </Window>
