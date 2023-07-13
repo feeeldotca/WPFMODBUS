@@ -19,12 +19,38 @@
         <Style TargetType="ToggleButton" x:Key="SwitchButtonStyle">
             <Setter Property="FontSize" Value="10" />
             <Setter Property="Foreground" Value="#9FFF" />
+            <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
                         <Border Background="#1000" CornerRadius="5" Name="root">
-                            
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition Height="8"/>
+                                </Grid.RowDefinitions>
+                                <Border Height="17" Width="33" CornerRadius="8.5" Background="#ffff" Name="back">
+                                    <Grid>
+                                        <TextBlock Text="Open" FontSize="9" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0" />
+                                        <TextBlock Text="Close" FontFamily="9" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0" />
+                                        <Ellipse Width="15" Height="15" Fill="#DDD" Margin="1,0" HorizontalAlignment="Left" Name="ellipse" />
+                                    </Grid>
+                                </Border>
+                                <ContentPresenter Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </Grid>
                         </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="root" Property="Background" Value="#2000" />
+                            </Trigger>
+                        <!--</ControlTemplate.Triggers>
+                        <ControlTemplate.Triggers>-->
+                            <Trigger Property="IsChecked" Value="True" >
+                                <Setter TargetName="back" Property="Background" Value="Orange" />
+                                <Setter TargetName="ellipse" Property="HorizontalAlignment" Value="Right" />
+                                <Setter TargetName="ellipse" Property="Fill" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -57,7 +83,7 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                 </Border.Background>
             </Border>
             <StackPanel Orientation="Horizontal">
-                <!--<Image Source="../Assets/Images/logo.png"   Width="25"/>-->
+                <Image Source="./Assets/Images/logo.png"   Width="45"/>
                 <TextBlock Text="FEEEL.CA" Foreground="#D087e8ec" FontSize="13" FontWeight="Normal" VerticalAlignment="Center" Margin="10,0"/>
             </StackPanel>
 
