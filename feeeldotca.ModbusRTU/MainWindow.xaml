@@ -1,9 +1,8 @@
 ﻿<Window x:Class="feeeldotca.ModbusRTU.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:feeeldotca.ModbusRTU"
         mc:Ignorable="d"
         Title="Modbus RTU Test APP" Height="600" Width="1200">
     <WindowChrome.WindowChrome>
@@ -94,7 +93,13 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                     <GradientStop Color="Orange" Offset="1"/>
                 </LinearGradientBrush>
             </TextBlock.Foreground>
-                
-        </Grid>
+            
+        </Grid><StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <ToggleButton Content="Monitor" />
+                <ToggleButton Content="Log"/>
+
+                <Button Content="Setup"/>
+                <Button Content="Exit" />
+            </StackPanel>                
     </Grid>
 </Window>
