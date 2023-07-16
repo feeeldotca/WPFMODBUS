@@ -9,21 +9,19 @@
   },
   "packageFolders": {
     "C:\\Users\\zhang\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zhang\\source\\repos\\feeeldotca.ModbusRTU\\feeeldotca.ModbusRTU\\feeeldotca.ModbusRTU.csproj",
+      "projectUniqueName": "C:\\Users\\zhang\\source\\repos\\WPFMODBUS\\feeeldotca.ModbusRTU\\feeeldotca.ModbusRTU.csproj",
       "projectName": "feeeldotca.ModbusRTU",
-      "projectPath": "C:\\Users\\zhang\\source\\repos\\feeeldotca.ModbusRTU\\feeeldotca.ModbusRTU\\feeeldotca.ModbusRTU.csproj",
+      "projectPath": "C:\\Users\\zhang\\source\\repos\\WPFMODBUS\\feeeldotca.ModbusRTU\\feeeldotca.ModbusRTU.csproj",
       "packagesPath": "C:\\Users\\zhang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zhang\\source\\repos\\feeeldotca.ModbusRTU\\feeeldotca.ModbusRTU\\obj\\",
+      "outputPath": "C:\\Users\\zhang\\source\\repos\\WPFMODBUS\\feeeldotca.ModbusRTU\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\zhang\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,6 +62,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.20, 6.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -72,7 +88,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.109\\RuntimeIdentifierGraph.json"
       }
     }
   }

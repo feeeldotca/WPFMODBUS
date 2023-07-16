@@ -4,21 +4,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
+        FontFamily="Microsoft Yahei" FontSize="12" FontWeight="ExtraLight"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Title="Modbus RTU Test APP" Height="600" Width="1200">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="1" CaptionHeight="50"></WindowChrome>
     </WindowChrome.WindowChrome>
     <Window.Background>
-        <RadialGradientBrush Center="0.5,0" GradientOrigin="0.5, -0.5" RadiusX="0.9" RadiusY="1.2">
+        <RadialGradientBrush Center="0.5,0" GradientOrigin="0.5, -.5" RadiusX="0.7" RadiusY="1.2">
             <GradientStop Color="#ff61baff" Offset="0" />
             <GradientStop Color="#ff29384e" Offset="1"/>
         </RadialGradientBrush>
     </Window.Background>
     <Window.Resources>
+        <FontFamily x:Key="FF">./Assets/Fonts/#iconfont</FontFamily>
         <Style TargetType="ToggleButton" x:Key="SwitchButtonStyle">
             <Setter Property="FontSize" Value="10" />
             <Setter Property="Foreground" Value="#9FFF" />
             <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
+            <Setter Property="Margin" Value="5,0" />
+            <Setter Property="Width" Value="50" />
+            <Setter Property="Height" Value="35" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
@@ -26,12 +32,12 @@
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
-                                    <RowDefinition Height="8"/>
+                                    <RowDefinition Height="18"/>
                                 </Grid.RowDefinitions>
-                                <Border Height="17" Width="33" CornerRadius="8.5" Background="#ffff" Name="back">
+                                <Border Height="17" Width="43" CornerRadius="8.5" Background="#ffff" Name="back">
                                     <Grid>
-                                        <TextBlock Text="Open" FontSize="9" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0" />
-                                        <TextBlock Text="Close" FontFamily="9" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0" />
+                                        <TextBlock Text="Open" FontSize="9" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="4,0" />
+                                        <TextBlock Text="Close" FontFamily="9" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="4,0" />
                                         <Ellipse Width="15" Height="15" Fill="#DDD" Margin="1,0" HorizontalAlignment="Left" Name="ellipse" />
                                     </Grid>
                                 </Border>
@@ -47,14 +53,36 @@
                             <Trigger Property="IsChecked" Value="True" >
                                 <Setter TargetName="back" Property="Background" Value="Orange" />
                                 <Setter TargetName="ellipse" Property="HorizontalAlignment" Value="Right" />
-                                <Setter TargetName="ellipse" Property="Fill" Value="White" />
+                                <Setter TargetName="ellipse" Property="Fill" Value="black" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
             
-        </Style>    
+        </Style>
+        <Style TargetType="Button" x:Key="ControlButtonStyle">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="Background" Value="#1000" />
+            <Setter Property="Foreground" Value="#9fff" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="5">
+                            <Border Background="Transparent" Name="bor" CornerRadius="5">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </Border>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bor" Property="Background" Value="#2000" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <Ellipse Width="120" Height="120" VerticalAlignment="Top"   HorizontalAlignment="Left"
@@ -70,36 +98,54 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                 <RowDefinition Height="30" />
                 <RowDefinition />
                 <RowDefinition Height="30" />
-
             </Grid.RowDefinitions>
-            <Border Height="1" VerticalAlignment="Bottom" >
+            <Border Height="2" VerticalAlignment="Bottom" >
                 <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <RadialGradientBrush RadiusX="0.7" >
                         <GradientStop Color="White" Offset="0" />
                         <GradientStop Color="#0fffffff" Offset="0.3"/>
                         <GradientStop Color="#0FFF" Offset="1" />
-                    </LinearGradientBrush>
+                    </RadialGradientBrush>
                 </Border.Background>
             </Border>
             <StackPanel Orientation="Horizontal">
+                <StackPanel.Effect>
+                    <DropShadowEffect BlurRadius="2" Color="Black" ShadowDepth="5" Opacity="0.5" />
+                </StackPanel.Effect>
                 <Image Source="./Assets/Images/logo.png"   Width="45"/>
                 <TextBlock Text="FEEEL.CA" Foreground="#D087e8ec" FontSize="13" FontWeight="Normal" VerticalAlignment="Center" Margin="10,0"/>
             </StackPanel>
 
-            <TextBlock Text="Temp / Humidity Test Modbus RTU tool" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" />
-            <TextBlock.Foreground>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Color="Gold" Offset="0" />
-                    <GradientStop Color="Orange" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBlock.Foreground>
-            
-        </Grid><StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
-                <ToggleButton Content="Monitor" />
-                <ToggleButton Content="Log"/>
+            <TextBlock Text="Temp / Humidity Test Modbus RTU tool" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" >
+                <TextBlock.Effect>
+                    <DropShadowEffect BlurRadius="5" Color="Black" ShadowDepth="3" Opacity="0.5"/>
+                </TextBlock.Effect>
+                <TextBlock.Foreground>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="Gold" Offset="0" />
+                        <GradientStop Color="Orange" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+        
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                <ToggleButton Content="Monitor" Style="{StaticResource SwitchButtonStyle}"/>
+                <ToggleButton Content="Log" Style="{StaticResource SwitchButtonStyle}"/>
 
-                <Button Content="Setup"/>
-                <Button Content="Exit" />
-            </StackPanel>                
+                <Button Style="{StaticResource ControlButtonStyle}">
+                    <StackPanel>
+                        <TextBlock Text="&#xe728;" FontFamily="{StaticResource FF}" FontSize="20" Margin="0,5,0,3" />
+                        <TextBlock Text="Setup" FontSize="9" HorizontalAlignment="Center" Margin="0,0,0,5" />
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource ControlButtonStyle}" Click="Button_Click">
+                    <StackPanel>
+                        <TextBlock Text="&#xe650;" FontFamily="{StaticResource FF}" FontSize="20" Margin="0,5,0,3" />
+                        <TextBlock Text="Exit" FontSize="9" HorizontalAlignment="Center" Margin="0,0,0,5" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>        
+        </Grid>
+                
     </Grid>
 </Window>

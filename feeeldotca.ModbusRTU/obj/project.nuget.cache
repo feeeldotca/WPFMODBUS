@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "sEVsr78al/h/7wZHhVntmpfhq/dGNJPQYXDLOv2NXige0CU5kKd1/2QVAB9zGCxhIo3NikJsG/hezkk2yG6exA==",
+  "dgSpecHash": "MU3Xi6PrWyLvb+JA32pSo8aUw9jZ7l40w5Wtz5q7QCsVX/wDD3PagBEhrAGM8i9mVdfRBdIL+uHJw14YnIos+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zhang\\source\\repos\\feeeldotca.ModbusRTU\\feeeldotca.ModbusRTU\\feeeldotca.ModbusRTU.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\zhang\\source\\repos\\WPFMODBUS\\feeeldotca.ModbusRTU\\feeeldotca.ModbusRTU.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zhang\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.20\\microsoft.netcore.app.host.win-x64.6.0.20.nupkg.sha512",
+    "C:\\Users\\zhang\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.20\\microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\zhang\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.20\\microsoft.windowsdesktop.app.ref.6.0.20.nupkg.sha512",
+    "C:\\Users\\zhang\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.20\\microsoft.netcore.app.ref.6.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
