@@ -10,12 +10,14 @@
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="1" CaptionHeight="50"></WindowChrome>
     </WindowChrome.WindowChrome>
+    
     <Window.Background>
         <RadialGradientBrush Center="0.5,0" GradientOrigin="0.5, -.5" RadiusX="0.7" RadiusY="1.2">
             <GradientStop Color="#ff61baff" Offset="0" />
             <GradientStop Color="#ff29384e" Offset="1"/>
         </RadialGradientBrush>
     </Window.Background>
+    
     <Window.Resources>
         <FontFamily x:Key="FF">./Assets/Fonts/#iconfont</FontFamily>
         <Style TargetType="ToggleButton" x:Key="SwitchButtonStyle">
@@ -93,12 +95,14 @@ Margin="30, -100, 0,0" Fill="#08000000" />
 Margin="20,90,0,0" Fill="#06FFFFFF" />
 
         <Grid Margin="20,0">
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="55" />
                 <RowDefinition Height="30" />
                 <RowDefinition />
                 <RowDefinition Height="30" />
             </Grid.RowDefinitions>
+            <!--The First Row--> 
             <Border Height="2" VerticalAlignment="Bottom" >
                 <Border.Background>
                     <RadialGradientBrush RadiusX="0.7" >
@@ -108,6 +112,7 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                     </RadialGradientBrush>
                 </Border.Background>
             </Border>
+            <!--the very left icon and logo-->
             <StackPanel Orientation="Horizontal">
                 <StackPanel.Effect>
                     <DropShadowEffect BlurRadius="2" Color="Black" ShadowDepth="5" Opacity="0.5" />
@@ -115,7 +120,7 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                 <Image Source="./Assets/Images/logo.png"   Width="45"/>
                 <TextBlock Text="FEEEL.CA" Foreground="#D087e8ec" FontSize="13" FontWeight="Normal" VerticalAlignment="Center" Margin="10,0"/>
             </StackPanel>
-
+            <!--The App name in the middle-->
             <TextBlock Text="Temp / Humidity Test Modbus RTU tool" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" >
                 <TextBlock.Effect>
                     <DropShadowEffect BlurRadius="5" Color="Black" ShadowDepth="3" Opacity="0.5"/>
@@ -127,7 +132,7 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                     </LinearGradientBrush>
                 </TextBlock.Foreground>
             </TextBlock>
-        
+            <!--Toggle button and other buttons on the right--> 
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
                 <ToggleButton Content="Monitor" Style="{StaticResource SwitchButtonStyle}"/>
                 <ToggleButton Content="Log" Style="{StaticResource SwitchButtonStyle}"/>
@@ -144,7 +149,20 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                         <TextBlock Text="Exit" FontSize="9" HorizontalAlignment="Center" Margin="0,0,0,5" />
                     </StackPanel>
                 </Button>
-            </StackPanel>        
+            </StackPanel>
+           
+            <!--2nd row-->
+            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="&#xe650;" FontFamily="{StaticResource FF}" FontSize="18" Foreground="Gold" />
+                <TextBlock Text="2023/07/01 Monday" Foreground="#8fff" VerticalAlignment="Center" Margin="10,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right"  TextBlock.Foreground="Red">
+                <StackPanel.Effect>
+                    <DropShadowEffect BlurRadius="5" Color="Gray" ShadowDepth="0" Opacity="0.3"/>
+                </StackPanel.Effect>
+                <TextBlock Text="&#xe650;" FontFamily="{StaticResource FF}" FontSize="18" Foreground="Gold" />
+                <TextBlock Text="asdfasdfasdfasdf" VerticalAlignment="Center" Margin="10,0"/>
+            </StackPanel>
         </Grid>
                 
     </Grid>
