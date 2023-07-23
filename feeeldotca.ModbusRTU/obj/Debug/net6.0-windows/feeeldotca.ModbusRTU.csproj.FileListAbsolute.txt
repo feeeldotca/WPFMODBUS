@@ -28,8 +28,6 @@ C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\bin\Debug\net6.0-wind
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\bin\Debug\net6.0-windows\feeeldotca.ModbusRTU.dll
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\bin\Debug\net6.0-windows\feeeldotca.ModbusRTU.pdb
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\feeeldotca.ModbusRTU.csproj.AssemblyReference.cache
-C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\MainWindow.baml
-C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\feeeldotca.ModbusRTU_MarkupCompile.cache
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\feeeldotca.ModbusRTU.g.resources
@@ -39,3 +37,5 @@ C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-wind
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\feeeldotca.ModbusRTU.csproj.CoreCompileInputs.cache
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\feeeldotca.ModbusRTU.genruntimeconfig.cache
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\ref\feeeldotca.ModbusRTU.dll
+C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\Views\MainWindow.baml
+C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\Views\MainWindow.g.cs

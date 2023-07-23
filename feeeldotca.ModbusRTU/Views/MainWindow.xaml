@@ -163,7 +163,46 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                 <TextBlock Text="&#xe650;" FontFamily="{StaticResource FF}" FontSize="18" Foreground="Gold" />
                 <TextBlock Text="asdfasdfasdfasdf" VerticalAlignment="Center" Margin="10,0"/>
             </StackPanel>
+            
+                   <!-- 3rd row 7/21/2023-->
+            <ItemsControl ItemsSource="{Binding ItemList}" Grid.Row="2">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid/>
+
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border CornerRadius="5" Background="#1000" BorderThickness="0.5" Margin="10">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#87EBEC" Offset="0" />
+                                    <GradientStop Color="Transparent" Offset="0.3" />
+                                    <GradientStop Color="Transparent" Offset="0.8" />
+                                    <GradientStop Color="#87EBEC" Offset="1" />
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <Grid Margin="10,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition />
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="160"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding SlaveId}"
+                                           VerticalAlignment="Center" Foreground="#9987E8EC"/>
+                                
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+           
+            
         </Grid>
-                
     </Grid>
 </Window>

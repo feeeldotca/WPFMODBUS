@@ -1,4 +1,5 @@
-﻿using System;
+﻿using feeeldotca.ModbusRTU.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace feeeldotca.ModbusRTU
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new ItemsShow();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
