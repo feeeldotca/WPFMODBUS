@@ -137,7 +137,7 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                 <ToggleButton Content="Monitor" Style="{StaticResource SwitchButtonStyle}"/>
                 <ToggleButton Content="Log" Style="{StaticResource SwitchButtonStyle}"/>
 
-                <Button Style="{StaticResource ControlButtonStyle}">
+                <Button Style="{StaticResource ControlButtonStyle}" Click="Button_Click" ClickMode="Press">
                     <StackPanel>
                         <TextBlock Text="&#xe728;" FontFamily="{StaticResource FF}" FontSize="20" Margin="0,5,0,3" />
                         <TextBlock Text="Setup" FontSize="9" HorizontalAlignment="Center" Margin="0,0,0,5" />
@@ -166,12 +166,13 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
             
                    <!-- 3rd row 7/21/2023-->
             <ItemsControl ItemsSource="{Binding ItemList}" Grid.Row="2">
+                
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid/>
-
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
+                
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Border CornerRadius="5" Background="#1000" BorderThickness="0.5" Margin="10">
@@ -193,8 +194,32 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                                     <ColumnDefinition Width="160"/>
                                     <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding SlaveId}"
+                                <!--Slave ID-->
+                                <TextBlock Text="{Binding SlaveId, StringFormat={}#{0:00} Slave Station}"
                                            VerticalAlignment="Center" Foreground="#9987E8EC"/>
+                                <!--Legend-->
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Column="1">
+                                    <Border Width="8" Height="8" Background="#87E8EC" Margin="5,0" />
+                                    <TextBlock Text="Temp" Foreground="#9FFF" FontSize="11" Margin="0,0,5,0" />
+                                    <Border Width="8" Height="8" Background="Orange" Margin="5,0" />
+                                    <TextBlock Text="Humidity" Foreground="#9FFF" FontSize="11" />
+                                </StackPanel>
+                                
+                                <!--Temp display area-->
+                                <Border CornerRadius="5" Background="#1000" Grid.Row="1" Margin="0,0,0,5">
+                                    <Grid ClipToBounds="true"> <!--cliptobounds = true means water print won't go beyong its border-->
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <!--Water print-->
+                                        <TextBlock Text="&#xe618;" FontSize="120" FontFamily="{StaticResource FF}" Grid.RowSpan="2" Margin="-40,10,0,0" Foreground="#09FFFFFF" />
+                                        <!--Show Temp with orange background-->
+                                        <Border HorizontalAlignment="Center" VerticalAlignment="Top" Background="Orange" CornerRadius="5,5,5,5" Margin="0,5">
+                                            <TextBlock Text="Temp" Background="Orange" Foreground="#9fff" Margin="11,3" FontSize="11" FontWeight="Bold"/>
+                                        </Border>
+                                    </Grid>
+                                </Border>
                                 
                             </Grid>
                         </Border>
