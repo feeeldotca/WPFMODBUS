@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\App.xaml
-1-1644662438
+22067576646
 
-7454999390
+81326819877
 194-1590709219
-Views\MainWindow.xaml;
+Components\Meter.xaml;Views\MainWindow.xaml;
 
-False
+True
 
