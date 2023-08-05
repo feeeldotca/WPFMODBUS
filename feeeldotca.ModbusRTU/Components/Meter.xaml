@@ -6,7 +6,32 @@
              xmlns:local="clr-namespace:feeeldotca.ModbusRTU.Components"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Name="root">
+        <Canvas Name="scale_canvas" />
+        <Path Name="path" Stroke="#AFFF" StrokeThickness="2" 
+              RenderTransformOrigin="0.5,0.5" 
+              StrokeEndLineCap="Round"
+              StrokeStartLineCap="Round"
+              Width="{Binding ElementName=root, Path=ActualWidth}"
+              Height="{Binding ElementName=root, Path=ActualHeight}"
+              >
+            <Path.RenderTransform>
+                <RotateTransform Angle="-45" />
+            </Path.RenderTransform>
+        </Path>
+        <Path Name="path_value" Stroke="#AFFF" StrokeThickness="4" 
+              RenderTransformOrigin="0.5,0.5" 
+              StrokeEndLineCap="Round"
+              StrokeStartLineCap="Round"
+              Width="{Binding ElementName=root, Path=ActualWidth}"
+              Height="{Binding ElementName=root, Path=ActualHeight}"
+              >
+            <Path.RenderTransform>
+                <RotateTransform Angle="-45" />
+            </Path.RenderTransform>
+            <Path.Effect>
+                <DropShadowEffect Color="#87E8EC" BlurRadius="10" />
+            </Path.Effect>
+        </Path>
     </Grid>
 </UserControl>
