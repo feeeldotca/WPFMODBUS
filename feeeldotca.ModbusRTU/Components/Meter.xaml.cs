@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,7 @@ namespace feeeldotca.ModbusRTU.Components
 
         private void Meter_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            this.RefreshScale();
         }
 
         double radius = 0.0, step = 0.0;
@@ -51,7 +52,7 @@ namespace feeeldotca.ModbusRTU.Components
 
             double minValue = -40, maxValue = 80;
             step = 270.0 / (maxValue - minValue + 24);
-
+            int interval = 10;
             for(int i =0; i< maxValue-minValue +24; i++)
             {
                 if (i % 12 != 0) continue;
@@ -66,6 +67,9 @@ namespace feeeldotca.ModbusRTU.Components
                 lineScale.X2 = radius - (radius - 15) * Math.Cos(angle * Math.PI / 180);
                 lineScale.Y2= radius - (radius - 15) * Math.Sin(angle * Math.PI / 180);
 
+                scale_canvas.Children.Add(lineScale);
+                TextBlock txtScale = new TextBlock();
+                txtScale.Text = (minValue+interval * i /12).ToString();
             }
 
         }

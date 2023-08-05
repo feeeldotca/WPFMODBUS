@@ -39,3 +39,7 @@ C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-wind
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\ref\feeeldotca.ModbusRTU.dll
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\Views\MainWindow.baml
 C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\Components\Meter.g.cs
+C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\feeeldotca.ModbusRTU_MarkupCompile.lref
+C:\Users\zhang\source\repos\WPFMODBUS\feeeldotca.ModbusRTU\obj\Debug\net6.0-windows\Components\Meter.baml
