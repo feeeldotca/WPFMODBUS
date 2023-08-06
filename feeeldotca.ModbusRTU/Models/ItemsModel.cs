@@ -9,5 +9,6 @@ namespace feeeldotca.ModbusRTU.Models
     public class ItemsModel
     {
         public int SlaveId { get; set; } = 1;
+        public double Temperature { get; set; } = 30;
     }
 }

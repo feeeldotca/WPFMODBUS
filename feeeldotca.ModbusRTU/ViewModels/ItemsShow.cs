@@ -9,7 +9,7 @@ namespace feeeldotca.ModbusRTU.ViewModels
 {
     public class ItemsShow
     {
-        public List<ItemsModel> ItemList { get; set; } = new List<ItemsModel>();
+        public List<ItemsModel> ItemList { get; set; } = new();
         public ItemsShow()
         {
             ItemList.Add(new ItemsModel() { SlaveId = 1 }); ;

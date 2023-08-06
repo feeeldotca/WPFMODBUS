@@ -221,7 +221,7 @@ Margin="20,90,0,0" Fill="#06FFFFFF" />
                                             <TextBlock Text="Temp" Background="Orange" Foreground="#9fff" Margin="11,3" FontSize="11" FontWeight="Bold"/>
                                         </Border>
 
-                                        <feeel:Meter Grid.Row="1" />
+                                        <feeel:Meter Grid.Row="1" Margin="5,20,5,0" Value="{Binding Temperature}"  />
 
                                     </Grid>
                                 </Border>
