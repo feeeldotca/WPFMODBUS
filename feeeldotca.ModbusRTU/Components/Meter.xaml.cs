@@ -89,6 +89,7 @@ namespace feeeldotca.ModbusRTU.Components
             }
             string path_data_str = $"M{radius * 0.3} {radius}" + $"A{radius * 0.7} {radius * 0.7} 0 1 1 {radius} {radius * 1.7}";
             this.path.Data = Geometry.Parse(path_data_str);
+            this.RefreshValue();
         }
 
         private void RefreshValue()
